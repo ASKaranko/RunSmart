@@ -1,0 +1,41 @@
+body {
+  @include light;
+  color: $text-color;
+}
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+.button {
+  width: 150px;
+  height: 30px;
+  background-color: $main-color;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  @include medium;
+  font-size: 12px;
+  text-transform: uppercase;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+  &_main {
+    font-size: 16px;
+    width: 300px;
+    height: 50px;
+    margin-top: 67px;
+  }
+}
+@media all and (max-width: 575px) {
+  .button {
+    &_main {
+      width: 200px;
+      height: 50px;
+      font-size: 14px;
+    }
+  }
+}
+
