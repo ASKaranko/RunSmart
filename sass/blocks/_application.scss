@@ -1,0 +1,56 @@
+.application {
+  min-height: 500px;
+  padding: 100px 0 112px 0;
+  background: url(../img/application/application-bg.jpg) center center no-repeat;
+  background-size: cover;
+  &__title {
+    color: #fff;
+    @include bold;
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    color: #fff;
+    @include medium;
+    font-size: 20px;
+    width: 50%;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  &__block {
+    margin-top: 36px;
+  }
+  &__input {
+    width: 300px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    margin-top: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    &::placeholder {
+      color: #4b4b4b;
+      font-size: 14px;
+      line-height: 66px;
+    }
+  }
+  &__button {
+    margin-top: 20px;
+  }
+}
+@media all and (max-width: 575px) {
+  .application {
+    text-align: center;
+    &__subtitle {
+      width: 100%;
+    }
+  }
+  .form {
+    width: 100%;
+    align-items: center;
+  }
+}
