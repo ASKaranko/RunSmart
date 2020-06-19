@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-  <div class="promo">
+  <section class="promo">
     <div class="container">
       <header class="header">
         <a href="#" class="header__logo">
@@ -46,10 +46,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Наши преимущества -->
-  <div class="advantages">
+  <section class="advantages">
     <div class="container">
       <h1 class="advantages__title">Наши преимущества</h1>
       <div class="advantages__wrapper">
@@ -71,21 +71,43 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Секция бесплатной консультации -->
-  <div class="application">
+  <section class="application">
     <div class="container">
       <h1 class="application__title">Получите бесплатную консультацию <br> по подбору пульсометра </h1>
       <h3 class="application__subtitle">Просто заполните форму заявки <br> и мы перезвоним вам в течении 10 минут</h3>
-      <form action="" class="form form__block">
-        <input type="text" class="form__input" placeholder="Ваше имя">
-        <input type="tel" class="form__input" placeholder="Ваш телефон">
-        <input type="email" class="form__input" placeholder="Ваш E-mail">
+      <form action="#" class="form form__block">
+        <input required type="text" name="name" class="form__input" placeholder="Ваше имя">
+        <input required type="tel" name="phone" class="form__input" placeholder="Ваш телефон">
+        <input required type="email" name="email" class="form__input" placeholder="Ваш E-mail">
         <button class="button button_main form__button">Заказать консультацию</button>
       </form>
     </div>
-  </div>
+  </section>
 
+  <!-- Slider -->
+  <section class="slider">
+    <div class="container">
+      <div class="slider__wrapping">
+        <div class="slider-block">
+          <img src="./img/slider/polar-watch-1.jpg" alt="polar-watch" class="slider-block__item">
+          <img src="./img/slider/polar-watch-2.jpg" alt="polar-watch" class="slider-block__item">
+          <img src="./img/slider/polar-watch-3.jpg" alt="polar-watch" class="slider-block__item">
+        </div>
+        <div class="slider-arrows">
+          <button class="slider-arrows__arrow slider-arrows__arrow_left"></button>
+          <button class="slider-arrows__arrow slider-arrows__arrow_right"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="./js/slick.min.js"></script>
+<script src="./js/jquery.event.move.js"></script>
+<script src="./js/main.js"></script>
 </body>
 </html>
