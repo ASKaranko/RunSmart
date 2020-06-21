@@ -1,3 +1,9 @@
+*,
+::after,
+::before {
+  box-sizing: border-box
+}
+
 body {
   @include light;
   color: $text-color;
@@ -28,6 +34,17 @@ body {
     height: 50px;
     margin-top: 67px;
   }
+  &_mini {
+    font-size: 14px;
+    width: 131px;
+    height: 40px;
+  }
+}
+.title {
+  @include bold;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
 }
 @media all and (max-width: 575px) {
   .button {

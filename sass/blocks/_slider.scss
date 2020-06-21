@@ -10,23 +10,6 @@
       width: 100%;
     }  
   }
-  .slick-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    list-style-type: none;
-    button {
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      border: none;
-      background-color: $main-color;
-      color: transparent;
-      margin-right: 15px;
-      outline: none;
-    }
-  }
   &-arrows {
     position: absolute;
     top: 50%;
@@ -68,6 +51,28 @@
           transform: rotate(135deg);
         }
       }
+    }
+  }
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+  button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: grey;
+    color: transparent;
+    margin-right: 15px;
+    outline: none;
+  }
+  .slick-active {
+    button {
+      background-color: $main-color;
     }
   }
 }
