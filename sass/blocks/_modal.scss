@@ -1,0 +1,61 @@
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.56);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 380px;
+  min-height: 400px;
+  background-color: #f2f2f2;
+  padding: 38px 37px 40px 40px;
+  text-align: center;
+  &_mini {
+    width: 380px;
+    min-height: 140px;
+  }
+  &__close {
+    position: absolute;
+    top: 0;
+    right: -37px;
+    font-size: 37px;
+    line-height: 21px;
+    color: $main-color;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__subtitle {
+    @include bold;
+    font-size: 19px;
+  }
+  &__descr {
+    @include medium;
+    font-size: 14px;
+    margin-top: 11px;
+  }
+}
+.form {
+  &_modal {
+    margin-top: 25px;
+  }
+}
+#application, #order, #gratitude {
+  display: none;
+}
+@media all and (max-width:575px) {
+  .modal {
+    padding: 5px;
+    width: 270px;
+    &__close {
+      right: -20px;
+      font-size: 25px;
+    }
+  }
+}

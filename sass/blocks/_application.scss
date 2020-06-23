@@ -37,6 +37,9 @@
       font-size: 14px;
       line-height: 66px;
     }
+    &:first-of-type {
+      margin-top: 0px;
+    }
   }
   &__button {
     margin-top: 20px;
@@ -52,5 +55,8 @@
   .form {
     width: 100%;
     align-items: center;
+    &__input {
+      width: 260px;
+    }
   }
 }

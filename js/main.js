@@ -39,4 +39,22 @@ function toggleSlide(item) {
 toggleSlide('.catalog-item__link');
 toggleSlide('.catalog-item__list-link');
 
+  // Модальные окна
+
+  $('[data-modal=application]').on('click', function() {
+    $('.overlay, #application').fadeIn();
+  });
+  $('.modal__close').on('click', function() {
+    $('.overlay, #application, #order, #gratitude').fadeOut('slow');
+  });
+ 
+  // Вывод нужного имени пульсометра в зависимости от кнопки купить
+
+  $('.button_mini').each(function(i) {
+    $(this).on('click', function() {
+      $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
+      $('.overlay, #order').fadeIn('slow');
+    })
+  });
+
 });
