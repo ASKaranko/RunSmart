@@ -93,4 +93,21 @@ toggleSlide('.catalog-item__list-link');
   // маска ввода номера
   $('[type="tel"]').mask("+7 (999) 999-9999");
 
+  // отправка писем
+  $('form').submit(function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function () {
+      $(this).find("input").val(""); //очистка input после отправки формы
+      $('#application, #order').fadeOut();
+      $('.overlay, #gratitude').fadeIn('slow');
+
+      $('form').trigger('reset'); //очистка форм
+    });
+    return false;
+  });
+
 });
