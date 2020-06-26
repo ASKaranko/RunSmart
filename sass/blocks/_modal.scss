@@ -40,6 +40,17 @@
     font-size: 14px;
     margin-top: 11px;
   }
+  .error {
+    border: 1px solid red;
+  }
+  label.error {
+    width: 300px;
+    font-size: 13px;
+    border: none;
+    text-align: center;
+    margin-top: 10px;
+    @include bold;
+  }
 }
 .form {
   &_modal {
@@ -53,6 +64,9 @@
   .modal {
     padding: 5px;
     width: 270px;
+    label.error {
+      width: 270px;
+    }
     &__close {
       right: -20px;
       font-size: 25px;

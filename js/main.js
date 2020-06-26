@@ -57,4 +57,40 @@ toggleSlide('.catalog-item__list-link');
     })
   });
 
+  // Фунция валидации форм
+
+  function validateForms(form) {
+    $(form).validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: {
+          required: "Please specify your name",
+          minlength: jQuery.validator.format("At least {0} characters required!")
+        },
+        phone: "Please enter your phone number",
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com"
+        }
+      }
+    });
+  };
+
+  validateForms('#application form');
+  validateForms('#application-form');
+  validateForms('#order form');
+
+  // маска ввода номера
+  $('[type="tel"]').mask("+7 (999) 999-9999");
+
 });

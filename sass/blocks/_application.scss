@@ -15,6 +15,18 @@
     font-size: 20px;
     width: 50%;
   }
+  .error {
+    border: 1px solid red;
+  }
+  label.error {
+    width: 300px;
+    font-size: 13px;
+    border: none;
+    text-align: center;
+    margin-top: 10px;
+    @include bold;
+    color: #fff;
+  }
 }
 .form {
   display: flex;
@@ -50,6 +62,9 @@
     text-align: center;
     &__subtitle {
       width: 100%;
+    }
+    label.error {
+      width: 260px;
     }
   }
   .form {
