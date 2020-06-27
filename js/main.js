@@ -127,4 +127,7 @@ toggleSlide('.catalog-item__list-link');
             return false;
     });
 
+  // Включение анимации при скроллинге
+  new WOW().init();
+
 });
