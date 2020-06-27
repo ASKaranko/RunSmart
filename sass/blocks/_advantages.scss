@@ -17,6 +17,11 @@
   &__item {
     width: 28%;
     text-align: center;
+    &:nth-of-type(2) {
+        img {
+          animation: heartbeat 1.5s ease-in-out 0.5s infinite alternate;
+        }
+      }
   }
   &__image {
     height: 70px;
