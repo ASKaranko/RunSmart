@@ -77,17 +77,23 @@
         margin-right: 20px;
       }
     }
-    &__list {
+    &__back {
       width: 50%;
       margin-left: 20px;
       transform: translateX(0%);
-      padding-right: 20px;
+      margin-top: 0px;
+      position: relative;
       transition: all 0.5s;
+      &_active {
+        transform: translateX(-100%);
+        margin-left: 0px;
+      }
+    }
+    &__list {
+      padding-right: 20px;
       padding-left: 20px;
       margin-bottom: 0;
-      margin-top: 0px;
       list-style-type: none;
-      position: relative;
       li {
         color: #555;
         font-size: 14px;
@@ -105,15 +111,11 @@
           background-color: $main-color;
         }
       }
-      &_active {
-        transform: translateX(-100%);
-        margin-left: 0px;
-      }
       &-link {
         position: absolute;
         left: 50%;
         bottom: 0;
-        transform: translateX(calc(-50% - 19px));
+        transform: translateX(calc(-50% - 20px));
       }
     }
     &__img {

@@ -31,7 +31,7 @@ function toggleSlide(item) {
     $(this).on('click', function (e) {
       e.preventDefault();
       $('.catalog-item__content').eq(i).toggleClass('catalog-item__content_active');
-      $('.catalog-item__list').eq(i).toggleClass('catalog-item__list_active');
+      $('.catalog-item__back').eq(i).toggleClass('catalog-item__back_active');
     })
   });
 };
@@ -121,7 +121,7 @@ toggleSlide('.catalog-item__list-link');
   });
 
   // Плавный скроллинг
-    $("a[href^='#']").click(function() {
+    $("a[href='#up']").click(function() {
             let _href = $(this).attr("href");
             $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
             return false;
