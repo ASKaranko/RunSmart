@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  const formBlock = document.querySelector('.form__block'),
+        btnAppl = document.querySelector('.btnappl'),
+        form = document.querySelector('.form');
+        btnAppl.disabled = true;
+
   $('.slider-block').slick({
     dots: false,
     arrows: true,
@@ -93,6 +98,14 @@ toggleSlide('.catalog-item__list-link');
   // маска ввода номера
   $('[type="tel"]').mask("+7 (999) 999-9999");
 
+  formBlock.addEventListener('input', event => {
+    const target = event.target;
+
+    const elementsFormBlock = [...formBlock.elements].filter(elem => elem.tagName !== 'BUTTON');
+    const validForm = elementsFormBlock.every(elem => elem.value);
+    btnAppl.disabled = !validForm;
+  });
+
   // отправка писем
   $('form').submit(function (e) {
     e.preventDefault();
@@ -106,6 +119,7 @@ toggleSlide('.catalog-item__list-link');
       $('.overlay, #gratitude').fadeIn('slow');
 
       $('form').trigger('reset'); //очистка форм
+      btnAppl.disabled = true;
     });
     return false;
   });
